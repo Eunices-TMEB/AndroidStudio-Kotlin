@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/restaurant"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pastelChocloCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/logoImageView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/pastelChocloImage"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pastel_choclo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pastelChocloLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Pastel de Choclo"
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/pastelChocloImage"
+                app:layout_constraintTop_toTopOf="@id/pastelChocloImage" />
+
+            <TextView
+                android:id="@+id/pastelChocloLabelCant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Cantidad:"
+                android:textColor="@color/colorSubtitle"
+                app:layout_constraintStart_toEndOf="@id/pastelChocloImage"
+                app:layout_constraintTop_toBottomOf="@id/pastelChocloLabel" />
+
+            <EditText
+                android:id="@+id/pastelChocloCantidad"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/quantity_background"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:padding="4dp"
+                android:maxLength="2"
+                android:hint="0"
+                app:layout_constraintBottom_toBottomOf="@id/pastelChocloLabelCant"
+                app:layout_constraintStart_toEndOf="@id/pastelChocloLabelCant"
+                app:layout_constraintTop_toTopOf="@id/pastelChocloLabelCant" />
+
+            <TextView
+                android:id="@+id/pastelChocloSubtotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0"
+                android:textColor="@color/colorPrice"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cazuelaCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/pastelChocloCard">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/cazuelaImage"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cazuela"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cazuelaLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Cazuela"
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/cazuelaImage"
+                app:layout_constraintTop_toTopOf="@id/cazuelaImage" />
+
+            <TextView
+                android:id="@+id/cazuelaLabelCant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Cantidad:"
+                android:textColor="@color/colorSubtitle"
+                app:layout_constraintStart_toEndOf="@id/cazuelaImage"
+                app:layout_constraintTop_toBottomOf="@id/cazuelaLabel" />
+
+            <EditText
+                android:id="@+id/cazuelaCantidad"
+                android:layout_width="45dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/quantity_background"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:padding="4dp"
+                android:maxLength="2"
+                android:hint="0"
+                app:layout_constraintBottom_toBottomOf="@id/cazuelaLabelCant"
+                app:layout_constraintStart_toEndOf="@id/cazuelaLabelCant"
+                app:layout_constraintTop_toTopOf="@id/cazuelaLabelCant" />
+
+            <TextView
+                android:id="@+id/cazuelaSubtotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0"
+                android:textColor="@color/colorPrice"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/arrozConLecheCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/cazuelaCard">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/arrozConLecheImage"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/arrozconleche"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/arrozConLecheLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Arroz con Leche"
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/arrozConLecheImage"
+                app:layout_constraintTop_toTopOf="@id/arrozConLecheImage" />
+
+            <TextView
+                android:id="@+id/arrozConLecheLabelCant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Cantidad:"
+                android:textColor="@color/colorSubtitle"
+                app:layout_constraintStart_toEndOf="@id/arrozConLecheImage"
+                app:layout_constraintTop_toBottomOf="@id/arrozConLecheLabel" />
+
+            <EditText
+                android:id="@+id/arrozConLecheCantidad"
+                android:layout_width="45dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/quantity_background"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:padding="4dp"
+                android:maxLength="2"
+                android:hint="0"
+                app:layout_constraintBottom_toBottomOf="@id/arrozConLecheLabelCant"
+                app:layout_constraintStart_toEndOf="@id/arrozConLecheLabelCant"
+                app:layout_constraintTop_toTopOf="@id/arrozConLecheLabelCant" />
+
+            <TextView
+                android:id="@+id/arrozConLecheSubtotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0"
+                android:textColor="@color/colorPrice"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    
+    <androidx.cardview.widget.CardView
+        android:id="@+id/totalsCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/arrozConLecheCard">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/comidaLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comida"
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/totalSinPropina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0"
+                android:textColor="@color/colorPrice"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/comidaLabel" />
+
+            <Switch
+                android:id="@+id/propinaSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Incluir propina (10%)"
+                android:textColor="@color/colorText"
+                android:textSize="16sp"
+                android:checked="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/comidaLabel" />
+
+            <TextView
+                android:id="@+id/propinaMonto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0"
+                android:textColor="@color/colorPrice"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/propinaSwitch" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorSubtitle"
+                app:layout_constraintTop_toBottomOf="@id/propinaSwitch" />
+
+            <TextView
+                android:id="@+id/totalLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="TOTAL"
+                android:textColor="@color/colorText"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider" />
+
+            <TextView
+                android:id="@+id/totalConPropina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0"
+                android:textColor="@color/colorPrice"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/totalLabel" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
